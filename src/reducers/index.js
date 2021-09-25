@@ -33,12 +33,13 @@ const reducer = (state = initialState, action ) => {
         case(ADD_SMURF):
             return({
                 ...state, 
-                smurfs: [...state.smurfs, action.payload]
+                smurfs: [...state.smurfs, action.payload], 
+                isLoading:false, 
             });
         case(ADD_ERROR):
             return({
                 ...state, 
-                errorMessage: 'please fill out form'
+                errorMessage: action.payload
             });
         default: 
         return state;

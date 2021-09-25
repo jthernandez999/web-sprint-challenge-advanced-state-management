@@ -26,7 +26,7 @@ const AddForm = (props) => {
         e.preventDefault();
         if (state.name === "" || state.position === "" || state.nickname === "") {
             //add in error action
-            props.setError(errorMessage)
+            props.setError('please fill out form, name, position, nickname, and description are required.')
         }
         props.addSmurf(state)
     }
