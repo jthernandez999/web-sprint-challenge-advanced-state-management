@@ -38,7 +38,7 @@ const reducer = (state = initialState, action ) => {
         case(ADD_ERROR):
             return({
                 ...state, 
-                errorMessage: action.payload
+                errorMessage: 'please fill out form'
             });
         default: 
         return state;

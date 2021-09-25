@@ -26,7 +26,7 @@ const AddForm = (props) => {
         e.preventDefault();
         if (state.name === "" || state.position === "" || state.nickname === "") {
             //add in error action
-            props.setError()
+            props.setError(errorMessage)
         }
         props.addSmurf(state)
     }
