@@ -8,12 +8,10 @@ const SmurfList = (props)=> {
     if (isLoading) {
         return <h1>Loading...</h1>;
     }
-    // if (errorMessage) {
-    //     return <h2>Sorry there appears to be a error: {}</h2>
-    // }
+
     return(<div className="listContainer">
         {
-            smurfs.map(smurf => <Smurf smurf={smurf} />)
+            smurfs.map(smurf => <Smurf key={smurf.name} smurf={smurf} />)
         }
     </div>);
 }
